@@ -1,0 +1,2 @@
+"""asd"""
+print("asd")
