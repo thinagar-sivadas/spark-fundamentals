@@ -23,7 +23,7 @@ repos:
         args:
           - "--profile=black"
   - repo: https://github.com/pylint-dev/pylint
-    rev: v2.17.5
+    rev: v3.0.0a7
     hooks:
       - id: pylint
         args:
