@@ -1,3 +1,7 @@
+ci:
+  skip:
+    - pytest
+
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v4.4.0
@@ -38,3 +42,13 @@ repos:
         # - "--show-column-numbers"
         # - "--no-pretty"
         # - "--check-untyped-defs"
+  - repo: local
+    hooks:
+      - id: pytest
+        name: pytest
+        entry: pytest
+        language: python
+        pass_filenames: false
+        # alternatively you could `types: [python]` so it only runs when python files change
+        # though tests might be invalidated if you were to say change a data file
+        always_run: true
