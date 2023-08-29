@@ -1,8 +1,7 @@
-name: Run Pytest
+name: Run Test
 
 on:
   pull_request:
-    - main
 
 jobs:
   Test:
