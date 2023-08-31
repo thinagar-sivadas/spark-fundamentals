@@ -1,0 +1,57 @@
+services:
+  spark-master:
+    container_name: spark-master
+    image: custom_spark
+    command: bin/spark-class org.apache.spark.deploy.master.Master
+    ports:
+      - '8080:8080'
+      - '4040:4040'
+      - '7077:7077'
+    volumes:
+      - ./data:/opt/bitnami/spark/custom_data
+      - ./src:/opt/bitnami/spark/src
+      - spark-logs:/opt/bitnami/spark/spark-events
+
+  spark-worker:
+    container_name: spark-worker
+    image: custom_spark
+    command: bin/spark-class org.apache.spark.deploy.worker.Worker spark://spark-master:7077
+    depends_on:
+      - spark-master
+    environment:
+      - SPARK_MODE=worker
+      - SPARK_WORKER_CORES=2
+      - SPARK_WORKER_MEMORY=2g
+      - SPARK_MASTER_URL=spark://spark-master:7077
+    volumes:
+      - ./data:/opt/bitnami/spark/custom_data
+      - ./src:/opt/bitnami/spark/src
+      - spark-logs:/opt/bitnami/spark/spark-events
+
+  spark-history-server:
+    container_name: spark-history-server
+    image: custom_spark
+    command: bin/spark-class org.apache.spark.deploy.history.HistoryServer
+    ports:
+      - '18080:18080'
+    depends_on:
+      - spark-master
+      - spark-worker
+    volumes:
+      - ./data:/opt/bitnami/spark/custom_data
+      - ./src:/opt/bitnami/spark/src
+      - spark-logs:/opt/bitnami/spark/spark-events
+
+  jupyter-notebook:
+    container_name: jupyter-notebook
+    image: custom_spark
+    command: jupyter notebook --ip 0.0.0.0 --port 8888 --no-browser --allow-root --NotebookApp.token=''
+    ports:
+      - '8888:8888'
+    volumes:
+      - ./data:/opt/bitnami/spark/custom_data
+      - ./src:/opt/bitnami/spark/src
+      - spark-logs:/opt/bitnami/spark/spark-events
+
+volumes:
+  spark-logs:
