@@ -1,6 +1,7 @@
 ci:
   skip:
     - pytest
+    - pylint
 
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
@@ -34,14 +35,6 @@ repos:
       - id: isort
         args:
           - "--profile=black"
-  - repo: https://github.com/pylint-dev/pylint
-    rev: v3.0.0a7
-    hooks:
-      - id: pylint
-        args:
-          - "--max-line-length=120"
-        additional_dependencies:
-          - pyspark
   - repo: https://github.com/pre-commit/mirrors-mypy
     rev: v1.5.1
     hooks:
@@ -52,6 +45,17 @@ repos:
         # - "--show-column-numbers"
         # - "--no-pretty"
         # - "--check-untyped-defs"
+  - repo: local
+    hooks:
+      - id: pylint
+        name: pylint
+        entry: pylint
+        language: python
+        require_serial: true
+        types:
+          - "python"
+        args:
+          - "--max-line-length=120"
   - repo: local
     hooks:
       - id: pytest
