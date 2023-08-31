@@ -1,4 +1,4 @@
-name: Run Test
+name: Run CI
 
 on:
   pull_request:
@@ -31,3 +31,6 @@ jobs:
 
       - name: Run Pytest
         run: pytest
+
+      - name: Run Pylint
+        run: pylint $(git ls-files '*.py') --max-line-length=120
