@@ -4,7 +4,7 @@ on:
   pull_request:
 
 jobs:
-  Pytest:
+  CI:
     runs-on: ubuntu-latest
 
     steps:
