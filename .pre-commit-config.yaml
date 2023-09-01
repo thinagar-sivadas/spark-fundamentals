@@ -23,10 +23,6 @@ repos:
     rev: 0.6.0
     hooks:
       - id: nbstripout
-  - repo: https://github.com/Lucas-C/pre-commit-hooks-nodejs
-    rev: v1.1.2
-    hooks:
-      - id: markdown-toc
   - repo: https://github.com/psf/black/
     rev: 23.7.0
     hooks:
