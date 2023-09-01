@@ -1,8 +1,16 @@
-<!-- Add badges from somewhere like: [shields.io](https://shields.io/)
+![Repo Stars](https://img.shields.io/github/stars/Thinagar-Sivadas/spark-fundamentals)
+![HitCount](https://img.shields.io/endpoint?url=https%3A%2F%2Fhits.dwyl.com%2FThinagar-Sivadas%2Fspark-fundamentals.json%3Fcolor%3Dpink)
+![LastCommit](https://img.shields.io/github/last-commit/Thinagar-Sivadas/spark-fundamentals/main)
 
-[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
-[![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](https://opensource.org/licenses/)
-[![AGPL License](https://img.shields.io/badge/license-AGPL-blue.svg)](http://www.gnu.org/licenses/agpl-3.0) -->
+
+![Open Issues](https://img.shields.io/github/issues-raw/Thinagar-Sivadas/spark-fundamentals
+)
+![Open PR](https://img.shields.io/github/issues-pr-raw/Thinagar-Sivadas/spark-fundamentals
+)
+![Closed Issues](https://img.shields.io/github/issues-closed-raw/Thinagar-Sivadas/spark-fundamentals
+)
+![Closed PR](https://img.shields.io/github/issues-pr-closed-raw/Thinagar-sivadas/spark-fundamentals
+)
 
 [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/thinagar)
 
