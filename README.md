@@ -6,8 +6,6 @@
 ![Closed Issues](https://img.shields.io/github/issues-closed-raw/Thinagar-Sivadas/spark-fundamentals)
 ![Closed PR](https://img.shields.io/github/issues-pr-closed-raw/Thinagar-sivadas/spark-fundamentals)
 
-[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/thinagar)
-
 # Spark Fundamentals
 Discover Apache Spark's core concepts and applications. Explore tutorials, examples, and code snippets for beginners and experienced developers. Master data processing and analysis through hands-on guidance. Elevate your skills in this essential open-source big data framework
 
