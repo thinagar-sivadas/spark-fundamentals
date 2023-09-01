@@ -3,14 +3,10 @@
 ![LastCommit](https://img.shields.io/github/last-commit/Thinagar-Sivadas/spark-fundamentals/main)
 
 
-![Open Issues](https://img.shields.io/github/issues-raw/Thinagar-Sivadas/spark-fundamentals
-)
-![Open PR](https://img.shields.io/github/issues-pr-raw/Thinagar-Sivadas/spark-fundamentals
-)
-![Closed Issues](https://img.shields.io/github/issues-closed-raw/Thinagar-Sivadas/spark-fundamentals
-)
-![Closed PR](https://img.shields.io/github/issues-pr-closed-raw/Thinagar-sivadas/spark-fundamentals
-)
+![Open Issues](https://img.shields.io/github/issues-raw/Thinagar-Sivadas/spark-fundamentals)
+![Open PR](https://img.shields.io/github/issues-pr-raw/Thinagar-Sivadas/spark-fundamentals)
+![Closed Issues](https://img.shields.io/github/issues-closed-raw/Thinagar-Sivadas/spark-fundamentals)
+![Closed PR](https://img.shields.io/github/issues-pr-closed-raw/Thinagar-sivadas/spark-fundamentals)
 
 [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/thinagar)
 
