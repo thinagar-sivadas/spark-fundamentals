@@ -23,8 +23,10 @@ docker build -t custom_spark .
 
 # Run the container
 docker-compose up -d
-# Stop the container
+# Stop and remove the container and volumes. This will purge the history server data
 docker-compose down -v
+# Stop the container
+docker-compose stop
 ```
 
 ## Usage
