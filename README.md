@@ -11,15 +11,37 @@ Install the following tools globally in your environment
 
 ## Installation
 ```bash
+# First time setup
 git clone https://github.com/Thinagar-Sivadas/spark-fundamentals.git
 cd spark-fundamentals
 pip install -r requirements.txt
+
+# For mac users
+docker build --platform linux/amd64 -t custom_spark .
+# For all other users
 docker build -t custom_spark .
-docker-compose up -d  #Start the container
-docker-compose down -v #Stop the container
+
+# Run the container
+docker-compose up -d
+# Stop the container
+docker-compose down -v
 ```
 
-## Topics
+## Usage
+This links can only be accessed after the docker container is up and running
+
+[Spark Driver Notebook](http://localhost:8888) (_Allows running the spark applications interactively_)
+
+[Spark History Server UI](http://localhost:18080) (_Allows viewing both historical and running spark application_)
+
+[Spark Master UI](http://localhost:8080) (_This link shows basic information about the cluster_)
+
+<!-- [Spark UI](http://localhost:4040) (_This link can only be accessed while the spark application is running_) -->
+
+
+## Tutorials
+### Chapter 2
+WIP
 <!-- [Topics](https://linktodocumentation) -->
 
 
