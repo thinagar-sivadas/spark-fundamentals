@@ -33,4 +33,4 @@ jobs:
         run: pytest
 
       - name: Run Pylint
-        run: pylint $(git ls-files '*.py') --max-line-length=120
+        run: pylint $(git ls-files '*.py')

@@ -27,14 +27,10 @@ repos:
     rev: 23.7.0
     hooks:
       - id: black
-        args:
-          - "--line-length=120"
   - repo: https://github.com/PyCQA/isort
     rev: 5.12.0
     hooks:
       - id: isort
-        args:
-          - "--profile=black"
   - repo: https://github.com/pre-commit/mirrors-mypy
     rev: v1.5.1
     hooks:
@@ -49,13 +45,10 @@ repos:
     hooks:
       - id: pylint
         name: pylint
-        entry: pylint
+        entry: bash
         language: python
         require_serial: true
-        types:
-          - "python"
-        args:
-          - "--max-line-length=120"
+        args: ["-c", "pylint $(git ls-files '*.py')"]
   - repo: local
     hooks:
       - id: pytest
