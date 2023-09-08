@@ -15,14 +15,13 @@ Install the following tools globally in your environment
 git clone https://github.com/Thinagar-Sivadas/spark-fundamentals.git
 cd spark-fundamentals
 pip install -r requirements.txt
+docker build --platform linux/amd64 -t custom_spark . # For mac users
+docker build -t custom_spark . # For all other users
 
-# For mac users
-docker build --platform linux/amd64 -t custom_spark .
-# For all other users
-docker build -t custom_spark .
-
-# Run the container
+# Run the container with 1 worker
 docker-compose up -d
+# Run the container with multiple workers
+docker-compose up -d --scale spark-worker=2
 # Stop and remove the container and volumes. This will purge the history server data
 docker-compose down -v
 # Stop the container
