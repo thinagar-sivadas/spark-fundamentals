@@ -13,7 +13,6 @@ services:
       - spark-logs:/opt/bitnami/spark/spark-events
 
   spark-worker:
-    container_name: spark-worker
     image: custom_spark
     command: bin/spark-class org.apache.spark.deploy.worker.Worker spark://spark-master:7077
     depends_on:
