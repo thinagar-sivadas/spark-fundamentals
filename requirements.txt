@@ -1,5 +1,6 @@
 astroid==2.15.6
 cfgv==3.4.0
+chispa==0.9.3
 colorama==0.4.6
 dill==0.3.7
 distlib==0.3.7
