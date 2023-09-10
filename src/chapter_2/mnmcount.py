@@ -1,8 +1,5 @@
 """Chapter 2 - mnmcount.py"""
 
-# spark-submit ./src/chapter_2/mnmcount.py
-# docker-compose exec spark-master spark-submit ./src/chapter_2/mnmcount.py
-
 from pyspark.sql import SparkSession
 
 

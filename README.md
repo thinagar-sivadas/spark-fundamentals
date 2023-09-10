@@ -39,12 +39,36 @@ This links can only be accessed after the docker container is up and running
 
 <!-- [Spark UI](http://localhost:4040) (_This link can only be accessed while the spark application is running_) -->
 
-
 ## Tutorials
 ### Chapter 2
-WIP
-<!-- [Topics](https://linktodocumentation) -->
+>**Counting M&Ms for the Cookie Monster**
 
+This chapter demonstrates the basic concepts of Spark using the M&M's® candy data set. It includes simple code examples that process the data set and perform basic analyses, including:
+- Creating a DataFrame
+- Filtering and selecting DataFrame rows
+- Aggregating data
+
+To run in interactive mode:
+http://localhost:8888/notebooks/src/chapter_2/mnmcount.ipynb
+
+To run in batch mode:
+```bash
+docker-compose exec spark-master spark-submit ./src/chapter_2/mnmcount.py
+```
+
+## Contributing
+Pull requests are welcome. Adding of examples and tutorials are highly appreciated. Ensure pre-commit hooks are installed before committing the code. This will ensure the code is linted and formatted before committing. Include pytest unit tests for the code you add
+- Prerequisites
+    - Install JDK
+    - Set the `JAVA_HOME` environment variable
+    - Set the `PYSPARK_PYTHON` environment variable
+```bash
+# First time setup
+git clone https://github.com/Thinagar-Sivadas/spark-fundamentals.git
+cd spark-fundamentals
+pip install -r requirements.txt
+pre-commit install
+```
 
 ## Acknowledgements
  - [Learning Spark (Lightning-Fast Data Analytics), 2nd Edition](https://www.oreilly.com/library/view/learning-spark-2nd/9781492050032/)
