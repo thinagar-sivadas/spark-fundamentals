@@ -49,11 +49,11 @@ This chapter demonstrates the basic concepts of Spark using the M&M's® candy da
 - Aggregating data
 
 To run in interactive mode:
-http://localhost:8888/notebooks/src/chapter_2/mnmcount.ipynb
+http://localhost:8888/notebooks/src/chapter2/mnmcount.ipynb
 
 To run in batch mode:
 ```bash
-docker-compose exec spark-master spark-submit ./src/chapter_2/mnmcount.py
+docker-compose exec spark-master spark-submit ./src/chapter2/mnmcount.py
 ```
 
 ## Contributing
