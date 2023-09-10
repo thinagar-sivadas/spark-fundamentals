@@ -45,6 +45,19 @@ This links can only be accessed after the docker container is up and running
 WIP
 <!-- [Topics](https://linktodocumentation) -->
 
+## Contributing
+Pull requests are welcome. Adding of examples and tutorials are highly appreciated. Ensure pre-commit hooks are installed before committing the code. This will ensure the code is linted and formatted before committing. Include pytest unit tests for the code you add
+- Prerequisites
+    - Install JDK
+    - Set the JAVA_HOME environment variable
+    - Set the PYSPARK_PYTHON environment variable
+```bash
+# First time setup
+git clone https://github.com/Thinagar-Sivadas/spark-fundamentals.git
+cd spark-fundamentals
+pip install -r requirements.txt
+pre-commit install
+```
 
 ## Acknowledgements
  - [Learning Spark (Lightning-Fast Data Analytics), 2nd Edition](https://www.oreilly.com/library/view/learning-spark-2nd/9781492050032/)
