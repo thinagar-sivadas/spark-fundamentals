@@ -30,7 +30,7 @@ if __name__ == "__main__":
         spark.read.format("csv")
         .option("header", "true")
         .option("inferSchema", "true")
-        .load("/opt/bitnami/spark/custom_data/mnm_dataset.csv")
+        .load("/opt/bitnami/spark/custom_data/chapter2/mnm_dataset.csv")
     )
 
     print(mnm_df.show(n=10, truncate=False))
