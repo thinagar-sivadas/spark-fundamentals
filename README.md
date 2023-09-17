@@ -43,10 +43,7 @@ This links can only be accessed after the docker container is up and running
 ### Chapter 2
 >**Counting M&Ms for the Cookie Monster**
 
-This chapter demonstrates the basic concepts of Spark using the M&M's® candy data set. It includes simple code examples that process the data set and perform basic analyses, including:
-- Creating a DataFrame
-- Filtering and selecting DataFrame rows
-- Aggregating data
+Demonstrates the basic concepts of Spark using the M&M's® candy data set.
 
 To run in interactive mode:
 http://localhost:8888/notebooks/src/chapter2/mnmcount.ipynb
@@ -54,6 +51,29 @@ http://localhost:8888/notebooks/src/chapter2/mnmcount.ipynb
 To run in batch mode:
 ```bash
 docker-compose exec spark-master spark-submit ./src/chapter2/mnmcount.py
+```
+### Chapter 3
+>**DataFrame vs RDD API**
+
+Demonstrates the differences between the DataFrame and RDD APIs. The DataFrame API is the recommended API for most use cases due to high-level abstractions and optimizations.
+
+To run in interactive mode:
+http://localhost:8888/notebooks/src/chapter3/dataframe_vs_rdd_api.ipynb
+
+To run in batch mode:
+```bash
+docker-compose exec spark-master spark-submit ./src/chapter3/dataframe_vs_rdd_api.py
+```
+>**Schemas and Creating DataFrame**
+
+Demonstrates how to create a DataFrame from a schema. Schema offers a way to define the structure of the data in a table. It is recommended as it relieve spark from inferring the schema (*expensive operation for large table*) from the data. Additionally, it allows for error checking at compile time.
+
+To run in interactive mode:
+http://localhost:8888/notebooks/src/chapter3/create_schema_dataframe.ipynb
+
+To run in batch mode:
+```bash
+docker-compose exec spark-master spark-submit ./src/chapter3/create_schema_dataframe.py
 ```
 
 ## Contributing

@@ -1,4 +1,5 @@
 """Test file for dataframe_vs_rdd_api.py"""
+
 from chispa.dataframe_comparer import assert_df_equality
 from pyspark.sql.types import DoubleType, StringType, StructField, StructType
 
