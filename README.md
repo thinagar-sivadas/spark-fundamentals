@@ -75,6 +75,17 @@ To run in batch mode:
 ```bash
 docker-compose exec spark-master spark-submit ./src/chapter3/create_schema_dataframe.py
 ```
+>**Common DataFrame Operations**
+
+Demonstrates the common DataFrame operations such as select, filter, where, groupBy, orderBy, withColumnRenamed. Showcase save operations such as saveAsTable and save. These operations are the building blocks for data processing and analysis.
+
+To run in interactive mode:
+http://localhost:8888/notebooks/src/chapter3/common_dataframe_operations.ipynb
+
+To run in batch mode:
+```bash
+docker-compose exec spark-master spark-submit ./src/chapter3/common_dataframe_operations.py
+```
 
 ## Contributing
 Pull requests are welcome. Adding of examples and tutorials are highly appreciated. Ensure pre-commit hooks are installed before committing the code. This will ensure the code is linted and formatted before committing. Include pytest unit tests for the code you add
