@@ -86,6 +86,14 @@ To run in batch mode:
 ```bash
 docker-compose exec spark-master spark-submit ./src/chapter3/common_dataframe_operations.py
 ```
+### Chapter 4
+>**Spark SQL**
+
+Demonstrates the Spark SQL API. Spark SQL is a higher-level abstraction built on top of the DataFrame API. It allows for writing SQL queries to process and analyze data. Shows how to create database, tables, and views.
+
+To run in interactive mode:
+http://localhost:8888/notebooks/src/chapter4/spark_sql.ipynb
+```
 
 ## Contributing
 Pull requests are welcome. Adding of examples and tutorials are highly appreciated. Ensure pre-commit hooks are installed before committing the code. This will ensure the code is linted and formatted before committing. Include pytest unit tests for the code you add
