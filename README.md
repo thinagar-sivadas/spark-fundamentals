@@ -95,7 +95,7 @@ To run in interactive mode:
 http://localhost:8888/notebooks/src/chapter4/spark_sql.ipynb
 
 ## Contributing
-Pull requests are welcome. Adding of examples and tutorials are highly appreciated. Ensure pre-commit hooks are installed before committing the code. This will ensure the code is linted and formatted before committing. Include pytest unit tests for the code you add
+Pull requests are welcome. Adding of examples and tutorials are highly appreciated. Ensure pre-commit hooks are installed before committing the code. This will ensure the code is linted and formatted before committing. Include pytest unit tests for the code you add.
 - Prerequisites
     - Install JDK
     - Set the `JAVA_HOME` environment variable
