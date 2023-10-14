@@ -94,6 +94,11 @@ Demonstrates the Spark SQL API. Spark SQL is a higher-level abstraction built on
 To run in interactive mode:
 http://localhost:8888/notebooks/src/chapter4/spark_sql.ipynb
 
+To run in batch mode:
+```bash
+docker-compose exec spark-master spark-submit ./src/chapter4/spark_sql.py
+```
+
 ## Contributing
 Pull requests are welcome. Adding of examples and tutorials are highly appreciated. Ensure pre-commit hooks are installed before committing the code. This will ensure the code is linted and formatted before committing. Include pytest unit tests for the code you add.
 - Prerequisites
