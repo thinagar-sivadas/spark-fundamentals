@@ -98,6 +98,43 @@ To run in batch mode:
 ```bash
 docker-compose exec spark-master spark-submit ./src/chapter4/spark_sql.py
 ```
+### Chapter 5
+>**User Defined Functions**
+
+Demonstrates on how to create and use user defined functions (UDF). UDFs are used to extend the functionality of Spark SQL. It allows for writing custom functions in Python. Additionally, it shows how to create pandas UDFs which are vectorized UDFs that are executed in parallel. It is the preferred way to write UDFs as it is faster than regular UDFs.
+
+To run in interactive mode:
+http://localhost:8888/notebooks/src/chapter5/user_defined_functions.ipynb
+
+To run in batch mode:
+```bash
+docker-compose exec spark-master spark-submit ./src/chapter5/user_defined_functions.py
+```
+>**Higher Order Functions**
+
+Demonstrates some of the higher order functions available in Spark SQL. These functions are used to manipulate arrays and maps. It allows for writing complex data processing and analysis logic in a single SQL statement.
+
+To run in interactive mode:
+http://localhost:8888/notebooks/src/chapter5/higher_order_functions.ipynb
+
+To run in batch mode:
+```bash
+docker-compose exec spark-master spark-submit ./src/chapter5/higher_order_functions.py
+```
+
+## Contributing
+Pull requests are welcome. Adding of examples and tutorials are highly appreciated. Ensure pre-commit hooks are installed before committing the code. This will ensure the code is linted and formatted before committing. Include pytest unit tests for the code you add.
+- Prerequisites
+    - Install JDK
+    - Set the `JAVA_HOME` environment variable
+    - Set the `PYSPARK_PYTHON` environment variable
+```bash
+# First time setup
+git clone https://github.com/Thinagar-Sivadas/spark-fundamentals.git
+cd spark-fundamentals
+pip install -r requirements.txt
+pre-commit install
+```
 
 ## Contributing
 Pull requests are welcome. Adding of examples and tutorials are highly appreciated. Ensure pre-commit hooks are installed before committing the code. This will ensure the code is linted and formatted before committing. Include pytest unit tests for the code you add.
