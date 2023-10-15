@@ -68,9 +68,12 @@ services:
     environment:
       PGADMIN_DEFAULT_EMAIL: admin@admin.com
       PGADMIN_DEFAULT_PASSWORD: root
+      PGADMIN_CONFIG_SERVER_MODE: 'False'
     ports:
       - "5050:80"
     volumes:
       - pgadmin-data:/var/lib/pgadmin
 volumes:
   spark-logs:
+  postgres-data:
+  pgadmin-data:
