@@ -10,6 +10,7 @@ services:
     volumes:
       - ./data:/opt/bitnami/spark/custom_data
       - ./src:/opt/bitnami/spark/src
+      - ./jars:/opt/bitnami/spark/connectors/jars
       - spark-logs:/opt/bitnami/spark/spark-events
 
   spark-worker:
@@ -25,6 +26,7 @@ services:
     volumes:
       - ./data:/opt/bitnami/spark/custom_data
       - ./src:/opt/bitnami/spark/src
+      - ./jars:/opt/bitnami/spark/connectors/jars
       - spark-logs:/opt/bitnami/spark/spark-events
 
   spark-history-server:
@@ -39,6 +41,7 @@ services:
     volumes:
       - ./data:/opt/bitnami/spark/custom_data
       - ./src:/opt/bitnami/spark/src
+      - ./jars:/opt/bitnami/spark/connectors/jars
       - spark-logs:/opt/bitnami/spark/spark-events
 
   jupyter-notebook:
@@ -50,6 +53,7 @@ services:
     volumes:
       - ./data:/opt/bitnami/spark/custom_data
       - ./src:/opt/bitnami/spark/src
+      - ./jars:/opt/bitnami/spark/connectors/jars
       - spark-logs:/opt/bitnami/spark/spark-events
   postgres:
     container_name: postgres
