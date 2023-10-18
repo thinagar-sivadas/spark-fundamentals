@@ -121,6 +121,17 @@ To run in batch mode:
 ```bash
 docker-compose exec spark-master spark-submit ./src/chapter5/higher_order_functions.py
 ```
+>**External Datasources and Common Operations**
+
+Demonstrates connection to postgres database and reading data from it. It also shows how to write data to postgres database. Additionally, common dataframe operation such as union, joins, window functions, and pivot are demonstrated.
+
+To run in interactive mode:
+http://localhost:8888/notebooks/src/chapter5/external_datasources_common_operations.ipynb
+
+To run in batch mode:
+```bash
+docker-compose exec spark-master spark-submit --driver-class-path /opt/bitnami/spark/connectors/jars/postgresql-42.6.0.jar ./src/chapter5/external_datasources_common_operations.py
+```
 
 ## Contributing
 Pull requests are welcome. Adding of examples and tutorials are highly appreciated. Ensure pre-commit hooks are installed before committing the code. This will ensure the code is linted and formatted before committing. Include pytest unit tests for the code you add.

@@ -12,4 +12,4 @@ COPY ./log4j2.properties "$SPARK_HOME/conf"
 
 # Install the Python dependencies
 RUN pip install --no-cache-dir -r requirements.txt
-RUN pip install --no-cache-dir notebook
+RUN pip install --no-cache-dir notebook psycopg2-binary
