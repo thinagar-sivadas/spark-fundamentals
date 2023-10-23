@@ -132,20 +132,30 @@ To run in batch mode:
 ```bash
 docker-compose exec spark-master spark-submit --driver-class-path /opt/bitnami/spark/connectors/jars/postgresql-42.6.0.jar ./src/chapter5/external_datasources_common_operations.py
 ```
+### Chapter 7
+>**Configurations**
 
-## Contributing
-Pull requests are welcome. Adding of examples and tutorials are highly appreciated. Ensure pre-commit hooks are installed before committing the code. This will ensure the code is linted and formatted before committing. Include pytest unit tests for the code you add.
-- Prerequisites
-    - Install JDK
-    - Set the `JAVA_HOME` environment variable
-    - Set the `PYSPARK_PYTHON` environment variable
+Demonstrates on how to configure spark application. It shows how to enable dynamic allocation, set the number of executors, and set the number of cores per executor. Additionally, it shows how to set the number of partitions for a dataframe and the byte size of each partition.
+
+To run in interactive mode:
+http://localhost:8888/notebooks/src/chapter7/configurations.ipynb
+
+To run in batch mode:
 ```bash
-# First time setup
-git clone https://github.com/Thinagar-Sivadas/spark-fundamentals.git
-cd spark-fundamentals
-pip install -r requirements.txt
-pre-commit install
+docker-compose exec spark-master spark-submit ./src/chapter7/configurations.py
 ```
+>**Cache**
+
+Demonstrates how to cache data in memory. Caching data in memory is a common optimization technique to improve performance. It is recommended to cache data that is used multiple times in the application.
+
+To run in interactive mode:
+http://localhost:8888/notebooks/src/chapter7/cache.ipynb
+
+To run in batch mode:
+```bash
+docker-compose exec spark-master spark-submit ./src/chapter7/cache.py
+```
+
 
 ## Contributing
 Pull requests are welcome. Adding of examples and tutorials are highly appreciated. Ensure pre-commit hooks are installed before committing the code. This will ensure the code is linted and formatted before committing. Include pytest unit tests for the code you add.

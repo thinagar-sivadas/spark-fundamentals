@@ -55,6 +55,7 @@ services:
       - ./src:/opt/bitnami/spark/src
       - ./jars:/opt/bitnami/spark/connectors/jars
       - spark-logs:/opt/bitnami/spark/spark-events
+
   postgres:
     container_name: postgres
     image: postgres
@@ -66,6 +67,7 @@ services:
       - '5432:5432'
     volumes:
       - postgres-data:/var/lib/postgresql/data
+
   pgadmin:
     container_name: pgadmin4
     image: dpage/pgadmin4
@@ -77,6 +79,7 @@ services:
       - "5050:80"
     volumes:
       - pgadmin-data:/var/lib/pgadmin
+
 volumes:
   spark-logs:
   postgres-data:
