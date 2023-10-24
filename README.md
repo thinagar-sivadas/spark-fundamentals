@@ -155,7 +155,28 @@ To run in batch mode:
 ```bash
 docker-compose exec spark-master spark-submit ./src/chapter7/cache.py
 ```
+>**Data Skew**
 
+Demonstrates the definition of data skew and how to identify it.
+
+To run in interactive mode:
+http://localhost:8888/notebooks/src/chapter7/data_skew.ipynb
+
+To run in batch mode:
+```bash
+docker-compose exec spark-master spark-submit ./src/chapter7/data_skew.py
+```
+>**Adaptive Query Execution (AQE)**
+
+Demonstrates the adaptive query execution feature. AQE is a feature that allows spark to dynamically optimize the execution plan based on the data. It is recommended to enable this feature as it improves performance.
+
+To run in interactive mode:
+http://localhost:8888/notebooks/src/chapter7/adaptive_query_execution.ipynb
+
+To run in batch mode:
+```bash
+docker-compose exec spark-master spark-submit ./src/chapter7/adaptive_query_execution.py
+```
 
 ## Contributing
 Pull requests are welcome. Adding of examples and tutorials are highly appreciated. Ensure pre-commit hooks are installed before committing the code. This will ensure the code is linted and formatted before committing. Include pytest unit tests for the code you add.
