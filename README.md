@@ -188,6 +188,17 @@ To run in batch mode:
 ```bash
 docker-compose exec spark-master spark-submit ./src/chapter7/broadcast_join.py
 ```
+>**Salting**
+
+Demonstrates how to use salting to avoid data skew. Salting is a technique that allows spark to distribute the data evenly across partitions. It is recommended to use this technique when the data is skewed
+
+To run in interactive mode:
+http://localhost:8888/notebooks/src/chapter7/salting.ipynb
+
+To run in batch mode:
+```bash
+docker-compose exec spark-master spark-submit ./src/chapter7/salting.py
+```
 
 ## Contributing
 Pull requests are welcome. Adding of examples and tutorials are highly appreciated. Ensure pre-commit hooks are installed before committing the code. This will ensure the code is linted and formatted before committing. Include pytest unit tests for the code you add.
