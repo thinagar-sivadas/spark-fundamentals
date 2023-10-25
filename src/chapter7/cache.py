@@ -1,4 +1,4 @@
-"""Chapter 7: cache.py"""
+"""Chapter 7 - cache.py"""
 
 import pyspark.sql.functions as F
 from pyspark.sql import SparkSession

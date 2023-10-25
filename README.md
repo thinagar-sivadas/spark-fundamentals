@@ -177,6 +177,17 @@ To run in batch mode:
 ```bash
 docker-compose exec spark-master spark-submit ./src/chapter7/adaptive_query_execution.py
 ```
+>**Broadcast Join**
+
+Demonstrates broadcast join. Broadcast join is a join optimization technique that allows spark to broadcast the smaller table to all the executors. It is recommended to use this technique when the smaller table can fit in memory.
+
+To run in interactive mode:
+http://localhost:8888/notebooks/src/chapter7/broadcast_join.ipynb
+
+To run in batch mode:
+```bash
+docker-compose exec spark-master spark-submit ./src/chapter7/broadcast_join.py
+```
 
 ## Contributing
 Pull requests are welcome. Adding of examples and tutorials are highly appreciated. Ensure pre-commit hooks are installed before committing the code. This will ensure the code is linted and formatted before committing. Include pytest unit tests for the code you add.
