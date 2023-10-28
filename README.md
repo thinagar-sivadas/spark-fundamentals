@@ -199,7 +199,18 @@ To run in batch mode:
 ```bash
 docker-compose exec spark-master spark-submit ./src/chapter7/salting.py
 ```
+### Chapter 12
+>**User Defined Functions**
 
+Demonstrates on how to create and use pandas UDFs which are vectorized UDFs that are executed in parallel. It is the preferred way to write UDFs as it is faster than regular UDFs. This is a redesigned version of the user defined functions tutorial in chapter 5.
+
+To run in interactive mode:
+http://localhost:8888/notebooks/src/chapter12/user_defined_functions.ipynb
+
+To run in batch mode:
+```bash
+docker-compose exec spark-master spark-submit ./src/chapter12/user_defined_functions.py
+```
 ## Contributing
 Pull requests are welcome. Adding of examples and tutorials are highly appreciated. Ensure pre-commit hooks are installed before committing the code. This will ensure the code is linted and formatted before committing. Include pytest unit tests for the code you add.
 - Prerequisites
