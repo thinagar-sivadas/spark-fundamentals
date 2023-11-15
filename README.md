@@ -37,6 +37,8 @@ This links can only be accessed after the docker container is up and running
 
 [Spark Master UI](http://localhost:8080) (_This link shows basic information about the cluster_)
 
+[pgAdmin](http://localhost:5050) (_Allows viewing data in postgres database_)
+
 <!-- [Spark UI](http://localhost:4040) (_This link can only be accessed while the spark application is running_) -->
 
 ## Tutorials
