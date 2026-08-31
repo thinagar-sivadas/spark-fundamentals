@@ -5,7 +5,7 @@ ci:
 
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v4.5.0
+    rev: v6.0.0
     hooks:
       - id: check-yaml
       - id: end-of-file-fixer
@@ -16,24 +16,24 @@ repos:
       - id: no-commit-to-branch
         name: no-commit-to-main-branch
   - repo: https://github.com/python-jsonschema/check-jsonschema
-    rev: 0.27.3
+    rev: 0.38.0
     hooks:
       - id: check-github-workflows
         name: validate github workflows
   - repo: https://github.com/kynan/nbstripout
-    rev: 0.6.1
+    rev: 0.9.1
     hooks:
       - id: nbstripout
   - repo: https://github.com/psf/black/
-    rev: 23.12.1
+    rev: 26.5.1
     hooks:
       - id: black
   - repo: https://github.com/PyCQA/isort
-    rev: 5.13.2
+    rev: 9.0.1
     hooks:
       - id: isort
   - repo: https://github.com/pre-commit/mirrors-mypy
-    rev: v1.8.0
+    rev: v2.3.1
     hooks:
       - id: mypy
         # args:
