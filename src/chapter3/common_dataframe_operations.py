@@ -2,11 +2,10 @@
 
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import avg as spark_avg
-from pyspark.sql.functions import col, countDistinct
+from pyspark.sql.functions import col, countDistinct, to_timestamp, year
 from pyspark.sql.functions import max as spark_max
 from pyspark.sql.functions import min as spark_min
 from pyspark.sql.functions import sum as spark_sum
-from pyspark.sql.functions import to_timestamp, year
 from pyspark.sql.types import (
     BooleanType,
     FloatType,
