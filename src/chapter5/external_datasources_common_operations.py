@@ -29,23 +29,19 @@ if __name__ == "__main__":
 
     # Create table in postgres
     with psycopg2.connect(**connection_params) as conn, conn.cursor() as cursor:
-        cursor.execute(
-            """CREATE TABLE airport (
+        cursor.execute("""CREATE TABLE airport (
                             "City" TEXT,
                             "State" TEXT,
                             "Country" TEXT,
                             "IATA" TEXT
-                            )"""
-        )
-        cursor.execute(
-            """CREATE TABLE delay (
+                            )""")
+        cursor.execute("""CREATE TABLE delay (
                             date TEXT,
                             delay INT,
                             distance INT,
                             origin TEXT,
                             destination TEXT
-                            )"""
-        )
+                            )""")
 
     # Load data into postgres
     airport = (

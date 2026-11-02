@@ -23,17 +23,13 @@ if __name__ == "__main__":
     print(spark.sql("select celsius, exists(celsius, t -> t=35) as threshold from tC").show())
 
     # Reduce values in ArrayType column
-    print(
-        spark.sql(
-            """select celsius,
+    print(spark.sql("""select celsius,
                 reduce(celsius,
                         0,
                         (t, acc) -> t+acc,
                         acc -> (acc div size(celsius)) * 4
                     ) as avgFarenheit
                 from tC
-            """
-        ).show()
-    )
+            """).show())
 
     spark.stop()
