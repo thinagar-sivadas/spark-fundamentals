@@ -35,30 +35,20 @@ if __name__ == "__main__":
     df.createOrReplaceTempView("us_delay_flights_tbl")
 
     # run SQL query using Spark SQL
-    print(
-        spark.sql(
-            """
+    print(spark.sql("""
             SELECT distance, origin, destination
             FROM us_delay_flights_tbl WHERE distance > 1000
             ORDER BY distance DESC
-            """
-        ).show(10)
-    )
+            """).show(10))
 
-    print(
-        spark.sql(
-            """
+    print(spark.sql("""
             SELECT date, distance, origin, destination
             FROM us_delay_flights_tbl WHERE delay > 120 AND
             origin = 'SFO' and destination='ORD'
             ORDER BY delay DESC
-            """
-        ).show(10)
-    )
+            """).show(10))
 
-    print(
-        spark.sql(
-            """
+    print(spark.sql("""
             SELECT delay, origin, destination,
             CASE
                 WHEN delay>360 THEN 'Very Long Delays'
@@ -69,9 +59,7 @@ if __name__ == "__main__":
             END as Flight_Delays
             FROM us_delay_flights_tbl
             ORDER BY origin, delay DESC
-            """
-        ).show(10)
-    )
+            """).show(10))
 
     # Create database and table
     spark.sql("""CREATE DATABASE IF NOT EXISTS learn_spark_db""")
